@@ -1,0 +1,61 @@
+.icons{
+    display: flex;
+}
+.iconfooter{
+    align-items: center;
+    margin-bottom: 0;
+}
+.style{
+    text-decoration: none;
+    padding-left: 13%;
+    padding-top: 20px;
+    display: block;
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+.style{
+    background: solid white;
+}
+#facebook{
+    color:white;
+}
+#facebook:hover{
+    font-size: 35px;
+    color: #4267B2;
+    
+}
+#twitter{
+    color: white;
+}
+#twitter:hover{
+    font-size: 35px;
+    color: #1DA1F2;
+    
+}
+#instagram{
+    color: white;
+}
+#instagram:hover{
+    font-size: 35px;
+    color: #E1306C;
+    
+}
+#github{
+    color: white;
+}
+#github:hover{
+    font-size: 35px;
+    color: rgb(89,97,106);
+    
+}
+#youtube{
+    color:white;
+}
+#youtube:hover{
+    font-size: 35px;
+    color: #ff0000;
+}
