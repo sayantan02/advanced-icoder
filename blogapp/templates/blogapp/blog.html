@@ -16,7 +16,7 @@
       <div class="col-md-12 ">
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-               <strong class="d-inline-block mb-2 text-primary">Article by {{post.author}}</strong>
+               <strong class="d-inline-block mb-2 text-primary"><a href="/{{post.author}}">Article by {{post.author}}</a></strong>
                <h3 class="mb-0 mr-auto">{{post.title}}</h3>
                <div class="mb-1 ml-auto text-muted">posted on {{post.dateTime}}</div>
                <p class="card-text ml-auto mb-auto">{{post.content|truncatechars:100}}</p>

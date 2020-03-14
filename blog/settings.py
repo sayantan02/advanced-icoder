@@ -32,14 +32,20 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'blogapp.apps.BlogappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+    
+    #local apps
+    'blogapp.apps.BlogappConfig',
+    
+    # Third party apps
+    'crispy_forms',
+    
+   ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,7 +55,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    
+   ]
 
 ROOT_URLCONF = 'blog.urls'
 
@@ -64,10 +71,12 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'blog.wsgi.application'
 
@@ -107,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -122,5 +131,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MESSAGE_TAGS = {
-    messages.ERROR : 'danger'
+    messages.ERROR : 'danger',
+    messages.DEBUG : 'secondary',
 }
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

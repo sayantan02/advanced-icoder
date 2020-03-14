@@ -10,8 +10,14 @@ urlpatterns = [
          path('blog/' ,views.blog,name='Blog page'),
 
          path('blog/<str:slug>' ,views.blogPost,name='blogpost'),
-
+         
+         path('search/<str:slug>' ,views.blogPost,name='blogpost'),
+         
+         path('<str:author>' ,views.allauthor,name='allauthors'),
+         
          path('contact/' ,views.contact,name='contactPage'),
+         
+         path('contacts/' ,views.contacts,name='contactPage'),
 
          path('about/' ,views.about,name='about_page'),
          
@@ -25,8 +31,8 @@ urlpatterns = [
          
          path('error/' ,views.errorpage,name='error'),
          
-         path('search/<str:slug><int:loginusername>' ,views.blogPost,name='search-page'),
+         path('videos/',views.videos,name='videos-page'),
          
-         path('comment' ,views.comment,name='comment'),
-
+         path('/',views.blogPost,name='blogpost-comments'),
+         
 ]

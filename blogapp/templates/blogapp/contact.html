@@ -2,8 +2,9 @@
 {% block title %}<title>contact</title>{% endblock %}
 {% block contactactive %} active {% endblock contactactive %}
 {% block body %}
+{% block messages %}{% endblock %}
 {% for message in messages %}
-<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+<div class=" mt-1 alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
   <strong>Message:</strong> {{ message }}
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -12,12 +13,12 @@
 {% endfor %}
 <center><h2>Contact ICoder Admin</h2></center>
 <hr>
-<form action="/contact/" method="post" class="container my-4">{% csrf_token %}
+<form action="/contacts/" method="post" class="container my-4">{% csrf_token %}
     <div class=" my-4"><label for="inputName">Your Name</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
     </div>
     <div class=" mb-4"><label for="inputEmail">Your Email</label>
-      <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
     </div>
     <div class="form-group">
     <label for="inputPhone">Your Phone Number (with country code)</label>

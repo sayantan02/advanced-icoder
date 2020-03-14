@@ -1,32 +1,12 @@
-
 {% extends 'blogapp/basic.html' %}
 {% block title %}<title>ICoder Team</title>
 <link rel="icon" href="static/00-49-43-1024px-Wikinews_favicon.svg" type="image/icon" />
-		{% endblock %}<html>
-	<head>
-		<style>
-   #hi{
-     color: white; }
-    .us{
-        background-color: rgba(196,47,47,0.98);
-        color: white;
-        justify-content: center;
-        padding: 20px;
-        border: solid black 3px;
-    }
-    #text{
-        justify-content: center;
-    }
-  
-		</style>
-	</head>
+		{% endblock %}
   {% block body %}
   <body>
-              <div>
+    <div>
 	  {% load static %}
-
 			<!--making slides-->
-
 			<div class="container carousel-inner no-padding">
 				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner mt-2">
@@ -62,64 +42,8 @@
 				<!-- changable : -->
 				<label>Hii , I am the CEO of ICoder Team . This is my blog page. to know more scroll down</label>
 				<br />
-
 				<hr />
-
-				<!-- slider text starting -->
-				<label for="text"></label>
-				<h5>The code below</h5>
-				<textarea class="form-control us" id="text" rows="10 md-5">
-					Modern humans arrived on the Indian subcontinent from Africa no later than 55,000 years ago.[21] Their long occupation, initially in varying forms of isolation as hunter-gatherers, has made the region highly diverse, second only to Africa in human genetic diversity.[22] Settled life emerged on the subcontinent in the western margins of the Indus river basin 9,000 years ago, evolving gradually into the Indus Valley Civilisation of the third millennium BCE.[23] By 1200 BCE, an archaic form of Sanskrit, an Indo-European language, had diffused into India from the northwest, unfolding as the language of the Rigveda, and recording the dawning of Hinduism in India.[24] The Dravidian languages of India were supplanted in the northern regions.[25] By 400 BCE, stratification and exclusion by caste had emerged within Hinduism,[26] and Buddhism and Jainism had arisen, proclaiming social orders unlinked to heredity.[27] Early political
-					consolidations gave rise to the loose-knit Maurya and Gupta Empires based in the Ganges Basin.[28] Their collective era was suffused with wide-ranging creativity,[29] but also marked by the declining status of women,[30] and the incorporation of untouchability into an organised system of belief.[f][31] In south India, the Middle kingdoms exported Dravidian-languages scripts and religious cultures to the kingdoms of southeast Asia.[32]
-					In the early medieval era, Christianity, Islam, Judaism, and Zoroastrianism put down roots on India's southern and western coasts.[33] Armies from Central Asia intermittently overran India's plains,[34] eventually
-
-				</textarea>
-				<br />
-
-				<hr />
-
-				<br />
-
-				<hr />
-
-				<!-- slider text starting -->
-				<label action="/slider/" method="post" for="exampleFormControlTextarea1"></label>
-				<h5 type="text" id="title" title="title">{{title}}</h5>
-				<textarea class="form-control us" id="exampleFormControlTextarea1 slider" title="body" rows="10 md-5">{{body}}</textarea>
-				<br />
-
-				<hr />
-
-				<!--page numbers-->
-				<div class="container-fluid mt-4"></div>
-				<div>
-					<nav aria-label="Page navigation example">
-						<ul class="pagination">
-							<li class="page-item">
-								<a class="page-link" href="#" aria-label="Previous">
-									<span aria-hidden="true">«</span>
-								</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="index">1</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="analize">2</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#">3</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="#" aria-label="Next">
-									<span aria-hidden="true">»</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
+              </div>
 			{% endblock %}
-
-		</div>
 	</body>
 </html>

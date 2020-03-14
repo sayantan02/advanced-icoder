@@ -1,0 +1,16 @@
+{% extends 'blogapp/basic.html' %}
+{% block title %}<title>postauthors</title>{% endblock %}
+{% block body %}
+<body>
+    {% for posts in post %}
+    <div class="container">
+        <h2 class="blog-post-title">{{posts.title}} </h2>
+        <p class="blog-post-meta">{{posts.dateTime}} by {{posts.author}}</p>
+        <p>{{posts.content|linebreaks}}</p>
+        <hr>
+        <br>
+        <hr>
+    </div>
+    {% endfor %}
+</body>
+{% endblock %}

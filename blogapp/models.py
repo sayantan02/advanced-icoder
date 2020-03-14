@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 # Create your models here.
 class Contact(models.Model):
     custom_id = models.AutoField(primary_key = True)
@@ -22,10 +23,22 @@ class Post(models.Model) :
         return self.title + ' by ' + self.author
 
 class Comment(models.Model) :
-    user_id = models.ForeignKey(User,on_delete=models.CASCADE)
+    username = models.CharField(max_length=20)
     message = models.TextField()
     date_comment = models.DateTimeField(auto_now_add=True)
-    post_id = models.ForeignKey(Post,on_delete=models.CASCADE)
-    def __str__(self):
-        return str(self.user_id)
+    post = models.ForeignKey(Post,on_delete=models.CASCADE,related_name='comments')
+    active = models.BooleanField(default=True)
     
+    class Meta:
+        ordering = ('-date_comment',)
+    
+    def __str__(self):
+        return self.message
+
+class Video(models.Model):
+    title = models.CharField(max_length=70,blank=True)
+    video_src = models.TextField(blank=True)
+    height = models.CharField(max_length=7,default=210)
+    width = models.CharField(max_length=7,default=315)
+    def __str__(self):
+        return self.title[0:25] + "..."

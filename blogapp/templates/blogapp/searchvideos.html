@@ -1,0 +1,17 @@
+{% extends 'blogapp/basic.html' %}
+{% block title %}<title>videos</title>{% endblock %}
+{% block videosactive %}active{% endblock videosactive %}
+{% block body %}
+
+<div class="container">
+    
+    {% for vid in allVideos %}
+<center class="mt-4 mb-4">
+    <h3 class="my-2">{{vid.title}}</h3>
+<iframe width="{{vid.width}}" height="{{vid.height}}" src="{{vid.video_src}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+{% endfor %}
+
+</div>
+
+{% endblock %}
